@@ -6,8 +6,11 @@ A Homebrew tap for [PomodoroBar](https://github.com/valkens12/PomodoroBar).
 
 ```sh
 brew tap valkens12/tap
+brew trust valkens12/tap
 brew install --cask pomodorobar
 ```
+
+`brew trust` is required once per tap on Homebrew 6+.
 
 PomodoroBar is ad-hoc signed and **not** notarized, so on first launch macOS
 Gatekeeper may block it. If it does, run:
