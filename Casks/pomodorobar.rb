@@ -1,9 +1,10 @@
 # Homebrew Cask template for PomodoroBar.
 #
-# This file lives in the source repo with 1.2.1 / e9e3e6cf390f4282819bf56920698fe71681deebbbab0bfba7cd1b05b5503817 placeholders.
-# The release workflow (.github/workflows/release.yml) renders the real values
-# per published tag, attaches the filled cask to the GitHub Release, and pushes
-# it straight to the valkens12/homebrew-tap repo so users can:
+# This file lives in the source repo with placeholder version and sha256
+# fields below. The release workflow (.github/workflows/release.yml) renders
+# the real values per published tag, attaches the filled cask to the GitHub
+# Release, and pushes it straight to the valkens12/homebrew-tap repo so users
+# can:
 #
 #   brew tap valkens12/tap
 #   brew install --cask pomodorobar
@@ -12,8 +13,8 @@
 # Gatekeeper bypass (see caveats below).
 
 cask "pomodorobar" do
-  version "1.2.1"
-  sha256 "e9e3e6cf390f4282819bf56920698fe71681deebbbab0bfba7cd1b05b5503817"
+  version "1.3.0"
+  sha256 "5755fbbd782e64b3e7277c83b407e0d53d73f0e58a315531574c9bff21f51b7a"
 
   url "https://github.com/valkens12/PomodoroBar/releases/download/v#{version}/PomodoroBar-#{version}.zip"
   name "PomodoroBar"
