@@ -1,6 +1,6 @@
 # Homebrew Cask template for PomodoroBar.
 #
-# This file lives in the source repo with 1.1.1 / 46c53bb1420fc71926af2383ccfe9911474c2d2ae94d4b51a73fd0946cdf690a placeholders.
+# This file lives in the source repo with 1.2.0 / 285588cd62eb829c8f7283c6013dac263324b53cb1f5220eea96ccb84fc11026 placeholders.
 # The release workflow (.github/workflows/release.yml) renders the real values
 # per published tag and attaches the filled cask to the GitHub Release. Copy the
 # rendered cask into your tap repo (e.g. valkens12/homebrew-tap) so users can:
@@ -13,14 +13,14 @@
 # Gatekeeper bypass (see caveats below).
 
 cask "pomodorobar" do
-  version "1.1.1"
-  sha256 "46c53bb1420fc71926af2383ccfe9911474c2d2ae94d4b51a73fd0946cdf690a"
+  version "1.2.0"
+  sha256 "285588cd62eb829c8f7283c6013dac263324b53cb1f5220eea96ccb84fc11026"
 
   url "https://github.com/valkens12/PomodoroBar/releases/download/v#{version}/PomodoroBar-#{version}.zip"
   name "PomodoroBar"
   desc "Quiet Pomodoro timer that lives in the menu bar"
   homepage "https://github.com/valkens12/PomodoroBar"
-  depends_on macos: :tahoe
+  depends_on macos: ">= :sonoma"
 
   app "PomodoroBar.app"
 
