@@ -1,20 +1,19 @@
 # Homebrew Cask template for PomodoroBar.
 #
-# This file lives in the source repo with 1.2.0 / 285588cd62eb829c8f7283c6013dac263324b53cb1f5220eea96ccb84fc11026 placeholders.
+# This file lives in the source repo with 1.2.1 / e9e3e6cf390f4282819bf56920698fe71681deebbbab0bfba7cd1b05b5503817 placeholders.
 # The release workflow (.github/workflows/release.yml) renders the real values
-# per published tag and attaches the filled cask to the GitHub Release. Copy the
-# rendered cask into your tap repo (e.g. valkens12/homebrew-tap) so users can:
+# per published tag, attaches the filled cask to the GitHub Release, and pushes
+# it straight to the valkens12/homebrew-tap repo so users can:
 #
 #   brew tap valkens12/tap
-#   brew trust valkens12/tap
 #   brew install --cask pomodorobar
 #
 # The app is ad-hoc signed and NOT notarized, so first launch needs a one-time
 # Gatekeeper bypass (see caveats below).
 
 cask "pomodorobar" do
-  version "1.2.0"
-  sha256 "285588cd62eb829c8f7283c6013dac263324b53cb1f5220eea96ccb84fc11026"
+  version "1.2.1"
+  sha256 "e9e3e6cf390f4282819bf56920698fe71681deebbbab0bfba7cd1b05b5503817"
 
   url "https://github.com/valkens12/PomodoroBar/releases/download/v#{version}/PomodoroBar-#{version}.zip"
   name "PomodoroBar"
@@ -32,7 +31,7 @@ cask "pomodorobar" do
   caveats do
     <<~EOS
       PomodoroBar is ad-hoc signed and not notarized. On first launch macOS
-      Gatekeeper may block it. If so, run:
+      Gatekeeper will block it. This is a one-time step -- run:
 
           xattr -cr /Applications/PomodoroBar.app
 
