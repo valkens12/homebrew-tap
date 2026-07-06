@@ -13,8 +13,8 @@
 # Gatekeeper bypass (see caveats below).
 
 cask "pomodorobar" do
-  version "1.6.0"
-  sha256 "4f11951aa4b536f3fbbd992c961ae0cd5406a5a26c4089db406db45bd9a801fb"
+  version "1.7.0"
+  sha256 "57bf1a8b604b624b24025e3f8ec53ea9db1f0f9cc75c9ceb377545f0d8ae9f21"
 
   url "https://github.com/valkens12/PomodoroBar/releases/download/v#{version}/PomodoroBar-#{version}.zip"
   name "PomodoroBar"
