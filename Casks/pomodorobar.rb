@@ -13,8 +13,8 @@
 # Gatekeeper bypass (see caveats below).
 
 cask "pomodorobar" do
-  version "1.7.0"
-  sha256 "57bf1a8b604b624b24025e3f8ec53ea9db1f0f9cc75c9ceb377545f0d8ae9f21"
+  version "1.8.0"
+  sha256 "6a4a4bdae2a21a9039ed9bc0ca96c033ddf699ffaadeeb6713886b7518a16131"
 
   url "https://github.com/valkens12/PomodoroBar/releases/download/v#{version}/PomodoroBar-#{version}.zip"
   name "PomodoroBar"
@@ -27,6 +27,8 @@ cask "pomodorobar" do
   zap trash: [
     "~/Library/Preferences/com.archiet4.pomodorobar.plist",
     "~/Library/Caches/com.archiet4.pomodorobar",
+    # Focus-session history moved here from the preferences plist in 1.8.0.
+    "~/Library/Application Support/PomodoroBar",
   ]
 
   caveats do
